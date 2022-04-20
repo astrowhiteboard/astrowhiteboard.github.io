@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Astro Chart</title>
+		<link rel="shortcut icon" href="images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="style.css"></link>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	</head>
+	
+	<body style="background: #ccc; margin: 0px;">
+		
+		<div id="mainFrame">
+				
+			<div id="sidePanel">
+			
+				<div id="planetsDivOuter" class="sidePanelDiv">
+					
+					<div class="tab">
+						<button class="tabLinks" onclick="openTab(event, 'Black')" id="tabLinkBlack" style="background-color:black;"></button>
+						<button class="tabLinks" onclick="openTab(event, 'Red')" id="tabLinkRed" style="background-color:red;"></button>
+						<button class="tabLinks" onclick="openTab(event, 'Blue')" id="tabLinkBlue" style="background-color:blue;"></button>		
+						<button class="tabLinks" onclick="openTab(event, 'Green')" id="tabLinkGreen" style="background-color:green;"></button>
+						<button class="tabLinks" onclick="openTab(event, 'Yellow')" id="tabLinkYellow" style="background-color:yellow;"></button>
+					</div>
+					
+
+					<div id="planetsContainer">
+
+						<div id="Black" class="planetsDivInner">	
+							<div class="planet planetBlack" id="sun"> <img draggable="false" src="images/Sun.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="moon"> <img draggable="false" src="images/Moon.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="mercury"> <img draggable="false" src="images/Mercury.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="venus"> <img draggable="false" src="images/Venus.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="mars"> <img draggable="false" src="images/Mars.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="asc"> <img draggable="false" src="images/Asc.png" width="30px" height="auto"/> </div>
+							
+							<div class="planet planetBlack" id="jupiter"> <img draggable="false" src="images/Jupiter.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="saturn"> <img draggable="false" src="images/Saturn.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="uranus"> <img draggable="false" src="images/Uranus.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="neptune"> <img draggable="false"  src="images/Neptune.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="pluto2"> <img draggable="false" src="images/Pluto2.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="dsc"> <img draggable="false" src="images/Dsc.png" width="30px" height="auto"/> </div>
+							
+							<div class="planet planetBlack" id="pluto"> <img draggable="false" src="images/Pluto.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="chiron"> <img draggable="false" src="images/Chiron.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="northnode"> <img draggable="false" src="images/NorthNode.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="southnode"> <img draggable="false" src="images/SouthNode.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="blackmoonlilith"> <img draggable="false" src="images/blackmoonlilith.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="mc"> <img draggable="false" src="images/Mc.png" width="30px" height="auto"/> </div>
+							
+							<div class="planet planetBlack" id="lilith"> <img draggable="false" src="images/Lilith.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="ceres"> <img draggable="false" src="images/Ceres.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="pallas"> <img draggable="false" src="images/Pallas.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="juno"> <img draggable="false" src="images/Juno.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="vesta"> <img draggable="false" src="images/Vesta.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlack" id="ic"> <img draggable="false" src="images/Ic.png" width="30px" height="auto"/> </div>							
+						</div>
+					
+						<div id="Red" class="planetsDivInner">	
+							<div class="planet planetRed" id="sunRed"> <img draggable="false" src="images/SunRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="moonRed"> <img draggable="false" src="images/MoonRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="mercuryRed"> <img draggable="false" src="images/MercuryRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="venusRed"> <img draggable="false" src="images/VenusRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="marsRed"> <img draggable="false" src="images/MarsRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="ascRed"> <img draggable="false" src="images/AscRed.png" width="30px" height="auto"/> </div>
+								
+							<div class="planet planetRed" id="jupiterRed"> <img draggable="false" src="images/JupiterRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="saturnRed"> <img draggable="false" src="images/SaturnRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="uranusRed"> <img draggable="false" src="images/UranusRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="neptuneRed"> <img draggable="false"  src="images/NeptuneRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="pluto2Red"> <img draggable="false" src="images/Pluto2Red.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="dscRed"> <img draggable="false" src="images/DscRed.png" width="30px" height="auto"/> </div>
+								
+							<div class="planet planetRed" id="plutoRed"> <img draggable="false" src="images/PlutoRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="chironRed"> <img draggable="false" src="images/ChironRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="northnodeRed"> <img draggable="false" src="images/NorthNodeRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="southnodeRed"> <img draggable="false" src="images/SouthNodeRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="blackmoonlilithRed"> <img draggable="false" src="images/blackmoonlilithRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="mcRed"> <img draggable="false" src="images/McRed.png" width="30px" height="auto"/> </div>
+								
+							<div class="planet planetRed" id="lilithRed"> <img draggable="false" src="images/LilithRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="ceresRed"> <img draggable="false" src="images/CeresRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="pallasRed"> <img draggable="false" src="images/PallasRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="junoRed"> <img draggable="false" src="images/JunoRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="vestaRed"> <img draggable="false" src="images/VestaRed.png" width="30px" height="auto"/> </div>
+							<div class="planet planetRed" id="icRed"> <img draggable="false" src="images/IcRed.png" width="30px" height="auto"/> </div>	
+						</div>
+
+						<div id="Blue" class="planetsDivInner">	
+							<div class="planet planetBlue" id="sunBlue"> <img draggable="false" src="images/SunBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="moonBlue"> <img draggable="false" src="images/MoonBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="mercuryBlue"> <img draggable="false" src="images/MercuryBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="venusBlue"> <img draggable="false" src="images/VenusBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="marsBlue"> <img draggable="false" src="images/MarsBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="ascBlue"> <img draggable="false" src="images/AscBlue.png" width="30px" height="auto"/> </div>
+								
+							<div class="planet planetBlue" id="jupiterBlue"> <img draggable="false" src="images/JupiterBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="saturnBlue"> <img draggable="false" src="images/SaturnBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="uranusBlue"> <img draggable="false" src="images/UranusBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="neptuneBlue"> <img draggable="false"  src="images/NeptuneBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="pluto2Blue"> <img draggable="false" src="images/Pluto2Blue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="dscBlue"> <img draggable="false" src="images/DscBlue.png" width="30px" height="auto"/> </div>
+								
+							<div class="planet planetBlue" id="plutoBlue"> <img draggable="false" src="images/PlutoBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="chironBlue"> <img draggable="false" src="images/ChironBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="northnodeBlue"> <img draggable="false" src="images/NorthNodeBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="southnodeBlue"> <img draggable="false" src="images/SouthNodeBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="blackmoonlilithBlue"> <img draggable="false" src="images/blackmoonlilithBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="mcBlue"> <img draggable="false" src="images/McBlue.png" width="30px" height="auto"/> </div>
+								
+							<div class="planet planetBlue" id="lilithBlue"> <img draggable="false" src="images/LilithBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="ceresBlue"> <img draggable="false" src="images/CeresBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="pallasBlue"> <img draggable="false" src="images/PallasBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="junoBlue"> <img draggable="false" src="images/JunoBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="vestaBlue"> <img draggable="false" src="images/VestaBlue.png" width="30px" height="auto"/> </div>
+							<div class="planet planetBlue" id="icBlue"> <img draggable="false" src="images/IcBlue.png" width="30px" height="auto"/> </div>
+						</div>
+						
+						<div id="Green" class="planetsDivInner">	
+							<div class="planet planetGreen" id="sunGreen"> <img draggable="false" src="images/SunGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="moonGreen"> <img draggable="false" src="images/MoonGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="mercuryGreen"> <img draggable="false" src="images/MercuryGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="venusGreen"> <img draggable="false" src="images/VenusGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="marsGreen"> <img draggable="false" src="images/MarsGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="ascGreen"> <img draggable="false" src="images/AscGreen.png" width="30px" height="auto"/> </div>
+								
+							<div class="planet planetGreen" id="jupiterGreen"> <img draggable="false" src="images/JupiterGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="saturnGreen"> <img draggable="false" src="images/SaturnGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="uranusGreen"> <img draggable="false" src="images/UranusGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="neptuneGreen"> <img draggable="false"  src="images/NeptuneGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="pluto2Green"> <img draggable="false" src="images/Pluto2Green.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="dscGreen"> <img draggable="false" src="images/DscGreen.png" width="30px" height="auto"/> </div>
+								
+							<div class="planet planetGreen" id="plutoGreen"> <img draggable="false" src="images/PlutoGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="chironGreen"> <img draggable="false" src="images/ChironGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="northnodeGreen"> <img draggable="false" src="images/NorthNodeGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="southnodeGreen"> <img draggable="false" src="images/SouthNodeGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="blackmoonlilithGreen"> <img draggable="false" src="images/blackmoonlilithGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="mcGreen"> <img draggable="false" src="images/McGreen.png" width="30px" height="auto"/> </div>
+								
+							<div class="planet planetGreen" id="lilithGreen"> <img draggable="false" src="images/LilithGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="ceresGreen"> <img draggable="false" src="images/CeresGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="pallasGreen"> <img draggable="false" src="images/PallasGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="junoGreen"> <img draggable="false" src="images/JunoGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="vestaGreen"> <img draggable="false" src="images/VestaGreen.png" width="30px" height="auto"/> </div>
+							<div class="planet planetGreen" id="icGreen"> <img draggable="false" src="images/IcGreen.png" width="30px" height="auto"/> </div>
+						</div>
+						
+						<div id="Yellow" class="planetsDivInner">	
+							<div class="planet planetYellow" id="sunYellow"> <img draggable="false" src="images/SunYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="moonYellow"> <img draggable="false" src="images/MoonYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="mercuryYellow"> <img draggable="false" src="images/MercuryYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="venusYellow"> <img draggable="false" src="images/VenusYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="marsYellow"> <img draggable="false" src="images/MarsYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="ascYellow"> <img draggable="false" src="images/AscYellow.png" width="30px" height="auto"/> </div>
+								
+							<div class="planet planetYellow" id="jupiterYellow"> <img draggable="false" src="images/JupiterYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="saturnYellow"> <img draggable="false" src="images/SaturnYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="uranusYellow"> <img draggable="false" src="images/UranusYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="neptuneYellow"> <img draggable="false"  src="images/NeptuneYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="pluto2Yellow"> <img draggable="false" src="images/Pluto2Yellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="dscYellow"> <img draggable="false" src="images/DscYellow.png" width="30px" height="auto"/> </div>
+								
+							<div class="planet planetYellow" id="plutoYellow"> <img draggable="false" src="images/PlutoYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="chironYellow"> <img draggable="false" src="images/ChironYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="northnodeYellow"> <img draggable="false" src="images/NorthNodeYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="southnodeYellow"> <img draggable="false" src="images/SouthNodeYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="blackmoonlilithYellow"> <img draggable="false" src="images/blackmoonlilithYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="mcYellow"> <img draggable="false" src="images/McYellow.png" width="30px" height="auto"/> </div>
+								
+							<div class="planet planetYellow" id="lilithYellow"> <img draggable="false" src="images/LilithYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="ceresYellow"> <img draggable="false" src="images/CeresYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="pallasYellow"> <img draggable="false" src="images/PallasYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="junoYellow"> <img draggable="false" src="images/JunoYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="vestaYellow"> <img draggable="false" src="images/VestaYellow.png" width="30px" height="auto"/> </div>
+							<div class="planet planetYellow" id="icYellow"> <img draggable="false" src="images/IcYellow.png" width="30px" height="auto"/> </div>
+						</div>
+						
+					</div>
+					<div id="clearPlanetsDiv">
+						<button id="clearPlanets" type="button" onclick="clearPlanets()">Clear Planets</button>
+					</div>
+				</div>
+
+				<div id="aspectLinesDiv" class="sidePanelDiv">
+					
+					
+					<div id="linesContainer">
+						<div>Draw Lines</div>
+						
+						<div id="radioButtonsDiv" class="aspectDiv">
+							<input type="radio" id="thin" name="thickness" value="thin" checked onclick="lineThickness()">
+							<label for="thin">Thin</label>
+							<input type="radio" id="thick" name="thickness" value="thick" onclick="lineThickness()">
+							<label for="thick">Thick</label>
+						</div>
+						
+						<div id="aspectButtonsDiv" class="aspectDiv">
+							<div id="lineBlack" class="aspectLineButton" onclick="aspectLineButtonClicked('Black')">	<hr style="border-top:2px solid black;">
+							</div>
+						
+							<div id="lineRed" class="aspectLineButton" onclick="aspectLineButtonClicked('Red')"> <hr style="border-top:2px solid red;">
+							</div>
+
+							<div id="lineBlue" class="aspectLineButton" onclick="aspectLineButtonClicked('Blue')"> <hr style="border-top:2px solid blue">
+							</div>
+							
+							<div id="lineGreen" class="aspectLineButton" onclick="aspectLineButtonClicked('Green')">	<hr style="border-top:2px solid green;">
+							</div>
+							
+							<div id="lineYellow" class="aspectLineButton" onclick="aspectLineButtonClicked('Yellow')"> <hr style="border-top:2px solid yellow;">
+							</div>
+						</div>
+					
+						<div id="clearLinesDiv">
+							<button id="clearLines" type="button" onclick="clearAspectLines()">Clear Aspect Lines</button>
+						</div>
+					</div>
+					
+					
+				</div>
+	
+				<div id="clearButtonsDiv" class="sidePanelDiv">
+					<button id="clearWholeChart" type="button" onclick="clearWholeChart()">Clear Whole Chart</button>
+				</div>
+					
+					
+					
+			</div>
+			
+			<div id="whole-chart">
+				<div id="outerwheeldiv">
+					<div id="hand"></div>
+				</div>
+				<div id="innerwheeldiv" draggable="false">
+					<canvas id="canvas">Your browser doesnt support canvas.</canvas>
+				</div>
+			</div>
+				
+
+		</div>
+		
+		<script src='scripts/main.js'></script>
+	</body>
+	
+</html>

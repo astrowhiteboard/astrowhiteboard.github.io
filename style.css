@@ -1,0 +1,256 @@
+#mainFrame {	
+	position: relative;
+	text-align: center;
+	/*#mainFrame moves horizontally when rotate is moved???*/
+}
+
+#sidePanel {
+	display: inline-block;
+	position: relative;
+	width: 220px;
+	height: 99vh;
+}
+
+.sidePanelDiv {
+	width: 175px;
+	position: relative;
+	z-index: 99;
+	float: right;
+	text-align: center;
+	display: block;
+	top: 80px;
+}
+
+
+#whole-chart {
+	display: inline-block;
+	position: relative;
+	width: 700px;
+	height: 100vh; /*Changing this makes wheel wobble when turning*/
+}
+
+
+
+#planetsContainer {
+	width: 169px;
+	height: 235px;
+	position: relative;
+	z-index: 99;
+	border-style: solid;
+	border-top-style: none;
+	border-bottom-style: none;
+	float: right;
+	/*top: 30%;
+	-ms-transform: translateY(-30%);
+	transform: translateY(-30%);*/
+	text-align: center;
+	background-color: white;
+}
+
+.planetsDivInner {
+	width: 170px;
+	height: 230px;
+	position: absolute;
+	z-index: 99;
+	float: right;
+	/*top: 30%;
+	-ms-transform: translateY(-30%);
+	transform: translateY(-30%);*/
+}
+
+.planet {
+	position: absolute; /*Needed to make it draggable*/
+	cursor: pointer;
+	visibility: visible;
+	z-index: 9999;
+}
+
+/*This stops planets/text from being highlighted when dragged.*/
+::selection {
+    color: none;
+    background: none;
+}
+
+#clearPlanetsDiv {
+	position: relative;
+	float: right;
+	text-align: center;
+	display: block;
+	background-color: white;
+	border: solid;
+	border-top: none;
+	width: 169px; /*Same as #planetsContainer*/
+}
+#clearPlanetsDiv button {
+	margin-bottom: 4px;
+}
+
+#Black, #Red, #Blue, #Green, #Yellow {  /*Tab contents Divs*/
+	background-image: url("images/BlankWhite400.png");
+	width: 169px;
+}
+
+.tabLinks {
+	background-color: #ccc;
+	float: left;
+	border-style: none;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	border-bottom-width: 3px;
+	
+	cursor: pointer;
+	width: 20%;
+	height: 20px;
+	border-top-left-radius: 15%;
+	border-top-right-radius: 15%;
+	text-align: center;
+	z-index: 98;
+}
+
+
+.tabLinks:hover {
+	background-color: #ddd;
+}
+
+.tabLinks.active {
+	
+}
+
+
+/*#aspectLinesDiv {
+	width: 175px;
+	height: 268px;
+	position: relative;
+	z-index: 99;
+	float: right;
+}*/
+
+#linesContainer {
+	width: 169px;
+	margin: auto, auto;
+	display: inline-block;
+/*	background-color: white;*/
+	border: 1px solid gray;
+	border-radius: 8%;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+#linesContainer label {
+	font-size: 12px;
+}
+
+.aspectDiv {
+	display: inline-block;
+	vertical-align: top;  /*Keeps from jumping down when content is added.*/
+}
+
+#radioButtonsDiv {
+	width: 20%;
+	padding-top: 10px;
+}
+
+#aspectButtonsDiv {
+	width: 60%;
+}
+
+.aspectLineButton {
+	width: 90px;
+	height: 15px;
+	background-image: linear-gradient(white,#ccc);
+	border: 1px solid black;
+	border-radius: 8%;
+	margin: auto;
+	margin-top: 3px;
+	margin-bottom: 2px;
+}
+
+.aspectLineButton.active {
+	background-image: linear-gradient(white,white);
+	border: 2px solid black;
+}
+
+#clearLinesDiv {
+	position: relative;
+	float: right;
+	text-align: center;
+	display: block;
+	width: 169px; /*Same as #linesContainer*/
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+
+
+#clearWholeChart {
+	margin-top: 20px;
+	height: 30px;
+}
+
+
+
+
+
+#canvas {
+	/*background-color: blue;*/
+	width:492px;
+	height:492px;
+	border-radius: 50%;
+	z-index: 5;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto auto;
+	width: 100%;
+	height: 100%;
+}
+#innerwheeldiv {	
+	background-image: url("images/Astro Inner Wheel.png");
+	background-size: 550px 550px;
+	background-color: white;
+	background-position: center;
+	width:492px;
+	height:492px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto auto;
+	position: absolute;
+	border-radius: 50%;
+}
+
+#outerwheeldiv {
+	background-image: url("images/Astro Outer Wheel.png");
+	background-size: 550px 550px; /*Width and height must be the same as this.*/
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: center;
+	width:550px;
+	height:550px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto auto;
+	position: absolute;
+	border-radius: 50%;
+}
+
+#hand{
+	position: absolute;
+	width: 20px;
+	height: 60px;
+	left: -22px;
+	top: 245px;
+	background: #222;
+	border-radius:50%;
+	background-image: url("images/Rotate.png");
+	background-size: 20px 60px; /*Width and height must be the same as this.*/
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
